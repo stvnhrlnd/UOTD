@@ -37,37 +37,13 @@
   <ItemGroup>
     <Folder Include="FlaskWebProject\" />
     <Folder Include="FlaskWebProject\static\" />
-    <Folder Include="FlaskWebProject\static\content\" />
-    <Folder Include="FlaskWebProject\static\fonts\" />
-    <Folder Include="FlaskWebProject\static\scripts\" />
+    <Folder Include="FlaskWebProject\static\css\" />
     <Folder Include="FlaskWebProject\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FlaskWebProject\static\css\normalize.css" />
+    <Content Include="FlaskWebProject\static\css\skeleton.css" />
     <Content Include="requirements.txt" />
-    <Content Include="FlaskWebProject\static\content\bootstrap.css" />
-    <Content Include="FlaskWebProject\static\content\bootstrap.min.css" />
-    <Content Include="FlaskWebProject\static\content\site.css" />
-    <Content Include="FlaskWebProject\static\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="FlaskWebProject\static\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="FlaskWebProject\static\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="FlaskWebProject\static\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="FlaskWebProject\static\scripts\bootstrap.js" />
-    <Content Include="FlaskWebProject\static\scripts\bootstrap.min.js" />
-    <Content Include="FlaskWebProject\static\scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="FlaskWebProject\static\scripts\jquery-1.10.2.js" />
-    <Content Include="FlaskWebProject\static\scripts\jquery-1.10.2.min.js" />
-    <Content Include="FlaskWebProject\static\scripts\jquery-1.10.2.min.map" />
-    <Content Include="FlaskWebProject\static\scripts\jquery.validate-vsdoc.js" />
-    <Content Include="FlaskWebProject\static\scripts\jquery.validate.js" />
-    <Content Include="FlaskWebProject\static\scripts\jquery.validate.min.js" />
-    <Content Include="FlaskWebProject\static\scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="FlaskWebProject\static\scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="FlaskWebProject\static\scripts\modernizr-2.6.2.js" />
-    <Content Include="FlaskWebProject\static\scripts\respond.js" />
-    <Content Include="FlaskWebProject\static\scripts\respond.min.js" />
-    <Content Include="FlaskWebProject\static\scripts\_references.js" />
-    <Content Include="FlaskWebProject\templates\about.html" />
-    <Content Include="FlaskWebProject\templates\contact.html" />
     <Content Include="FlaskWebProject\templates\index.html" />
     <Content Include="FlaskWebProject\templates\layout.html" />
     <Content Include="web.config" />
