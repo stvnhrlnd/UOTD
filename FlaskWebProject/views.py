@@ -1,13 +1,13 @@
-"""
-Routes and views for the flask application.
-"""
-
-from datetime import datetime
+from datetime import date
 from flask import render_template
-from FlaskWebProject import app
+from FlaskWebProject import app, azuretablestorage, settings
 
-@app.route('/')
-@app.route('/home')
+repository = azuretablestorage.Repository(settings.REPOSITORY_SETTINGS)
+
+
+@app.route("/")
+@app.route("/home")
 def home():
-    """Renders the home page."""
-    return render_template('index.html')
+    uuid = repository.get_uotd()
+    today = date.today().strftime("%A, %d %B %Y")
+    return render_template("index.html", uuid=uuid, today=today)

@@ -20,6 +20,8 @@
     <RootNamespace>FlaskWebProject</RootNamespace>
     <InterpreterId>{cc623113-0a81-4e51-a129-1d0c10d454bf}</InterpreterId>
     <InterpreterVersion>3.4</InterpreterVersion>
+    <Environment>
+    </Environment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,6 +32,12 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FlaskWebProject\azuretablestorage.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlaskWebProject\settings.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="FlaskWebProject\__init__.py" />
     <Compile Include="FlaskWebProject\views.py" />
