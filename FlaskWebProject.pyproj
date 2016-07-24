@@ -35,6 +35,9 @@
     <Compile Include="FlaskWebProject\azuretablestorage.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="FlaskWebProject\run.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="FlaskWebProject\settings.py">
       <SubType>Code</SubType>
     </Compile>
