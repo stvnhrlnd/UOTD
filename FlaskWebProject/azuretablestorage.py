@@ -12,21 +12,32 @@ class Repository(object):
         self.service.create_table(self.uotd_table)
         self.uotd_partition = "uotd"
 
-    def get_uotd(self):
-        row_key = date.today().strftime("%Y%m%d")
+    def get_uotd(self, date_obj=None):
+        if date_obj is None:
+            row_key = date.today().strftime("%Y%m%d")
 
-        try:
-            uotd_entity = self.service.get_entity(self.uotd_table,
-                                                  self.uotd_partition,
-                                                  row_key)
-            uuid = uotd_entity.uuid
-        except AzureMissingResourceHttpError:
-            uuid = str(uuid1())
-            uotd_entity = {
-                "PartitionKey": self.uotd_partition,
-                "RowKey": row_key,
-                "uuid": uuid
-            }
-            self.service.insert_entity(self.uotd_table, uotd_entity)
+            try:
+                uotd_entity = self.service.get_entity(self.uotd_table,
+                                                      self.uotd_partition,
+                                                      row_key)
+                uuid = uotd_entity.uuid
+            except AzureMissingResourceHttpError:
+                uuid = str(uuid1())
+                uotd_entity = {
+                    "PartitionKey": self.uotd_partition,
+                    "RowKey": row_key,
+                    "uuid": uuid
+                }
+                self.service.insert_entity(self.uotd_table, uotd_entity)
+        else:
+            row_key = date_obj.strftime("%Y%m%d")
+
+            try:
+                uotd_entity = self.service.get_entity(self.uotd_table,
+                                                      self.uotd_partition,
+                                                      row_key)
+                uuid = uotd_entity.uuid
+            except AzureMissingResourceHttpError:
+                uuid = None
 
         return uuid
