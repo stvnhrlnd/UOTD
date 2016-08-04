@@ -10,31 +10,34 @@ class Repository(object):
                                     settings["STORAGE_KEY"])
         self.uotd_table = settings["STORAGE_TABLE_UOTD"]
         self.service.create_table(self.uotd_table)
-        self.uotd_partition = "uotd"
+        self.partition_key_format = "%Y%m"
+        self.row_key_format = "%d"
 
     def get_uotd(self, date_obj=None):
         if date_obj is None:
-            row_key = date.today().strftime("%Y%m%d")
+            partition_key = date.today().strftime(self.partition_key_format)
+            row_key = date.today().strftime(self.row_key_format)
 
             try:
                 uotd_entity = self.service.get_entity(self.uotd_table,
-                                                      self.uotd_partition,
+                                                      partition_key,
                                                       row_key)
                 uuid = uotd_entity.uuid
             except AzureMissingResourceHttpError:
                 uuid = str(uuid1())
                 uotd_entity = {
-                    "PartitionKey": self.uotd_partition,
+                    "PartitionKey": partition_key,
                     "RowKey": row_key,
                     "uuid": uuid
                 }
                 self.service.insert_entity(self.uotd_table, uotd_entity)
         else:
-            row_key = date_obj.strftime("%Y%m%d")
+            partition_key = date_obj.strftime(self.partition_key_format)
+            row_key = date_obj.strftime(self.row_key_format)
 
             try:
                 uotd_entity = self.service.get_entity(self.uotd_table,
-                                                      self.uotd_partition,
+                                                      partition_key,
                                                       row_key)
                 uuid = uotd_entity.uuid
             except AzureMissingResourceHttpError:
