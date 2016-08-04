@@ -49,6 +49,7 @@
     <Folder Include="FlaskWebProject\" />
     <Folder Include="FlaskWebProject\static\" />
     <Folder Include="FlaskWebProject\static\css\" />
+    <Folder Include="FlaskWebProject\static\favicon\" />
     <Folder Include="FlaskWebProject\static\vendor\" />
     <Folder Include="FlaskWebProject\static\scripts\" />
     <Folder Include="FlaskWebProject\static\vendor\Font-Awesome\" />
@@ -60,6 +61,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FlaskWebProject\static\css\custom.css" />
+    <Content Include="FlaskWebProject\static\favicon\android-chrome-192x192.png" />
+    <Content Include="FlaskWebProject\static\favicon\apple-touch-icon.png" />
+    <Content Include="FlaskWebProject\static\favicon\browserconfig.xml" />
+    <Content Include="FlaskWebProject\static\favicon\favicon-16x16.png" />
+    <Content Include="FlaskWebProject\static\favicon\favicon-32x32.png" />
+    <Content Include="FlaskWebProject\static\favicon\favicon.ico" />
+    <Content Include="FlaskWebProject\static\favicon\manifest.json" />
+    <Content Include="FlaskWebProject\static\favicon\mstile-150x150.png" />
     <Content Include="FlaskWebProject\static\vendor\clipboard.js\clipboard.min.js" />
     <Content Include="FlaskWebProject\static\vendor\Font-Awesome\css\font-awesome.min.css" />
     <Content Include="FlaskWebProject\static\vendor\Font-Awesome\fonts\fontawesome-webfont.eot" />
