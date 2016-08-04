@@ -11,6 +11,18 @@
     <link rel="stylesheet" href="/static/css/custom.css" />
 </head>
 <body>
+    <nav class="navbar">
+        <div class="container">
+            <ul>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="{{ url_for('home') }}">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="{{ url_for('archive') }}">Archive</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     {% block content %}{% endblock %}
     <script src="/static/vendor/clipboard.js/clipboard.min.js"></script>
     <script src="/static/scripts/copy-button.js"></script>

@@ -71,6 +71,7 @@
     <Content Include="FlaskWebProject\static\vendor\Skeleton\normalize.css" />
     <Content Include="FlaskWebProject\static\vendor\Skeleton\skeleton.css" />
     <Content Include="FlaskWebProject\static\scripts\copy-button.js" />
+    <Content Include="FlaskWebProject\templates\archive.html" />
     <Content Include="requirements.txt" />
     <Content Include="FlaskWebProject\templates\index.html" />
     <Content Include="FlaskWebProject\templates\layout.html" />

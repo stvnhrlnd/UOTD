@@ -6,8 +6,12 @@ repository = azuretablestorage.Repository(settings.REPOSITORY_SETTINGS)
 
 
 @app.route("/")
-@app.route("/home")
 def home():
     uuid = repository.get_uotd()
     today = date.today().strftime("%A, %d %B %Y")
     return render_template("index.html", uuid=uuid, today=today)
+
+
+@app.route("/archive")
+def archive():
+    return render_template("archive.html")
