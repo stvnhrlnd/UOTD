@@ -49,11 +49,28 @@
     <Folder Include="FlaskWebProject\" />
     <Folder Include="FlaskWebProject\static\" />
     <Folder Include="FlaskWebProject\static\css\" />
+    <Folder Include="FlaskWebProject\static\vendor\" />
+    <Folder Include="FlaskWebProject\static\scripts\" />
+    <Folder Include="FlaskWebProject\static\vendor\Font-Awesome\" />
+    <Folder Include="FlaskWebProject\static\vendor\Font-Awesome\css\" />
+    <Folder Include="FlaskWebProject\static\vendor\Font-Awesome\fonts\" />
+    <Folder Include="FlaskWebProject\static\vendor\clipboard.js\" />
+    <Folder Include="FlaskWebProject\static\vendor\Skeleton\" />
     <Folder Include="FlaskWebProject\templates\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FlaskWebProject\static\css\normalize.css" />
-    <Content Include="FlaskWebProject\static\css\skeleton.css" />
+    <Content Include="FlaskWebProject\static\css\custom.css" />
+    <Content Include="FlaskWebProject\static\vendor\clipboard.js\clipboard.min.js" />
+    <Content Include="FlaskWebProject\static\vendor\Font-Awesome\css\font-awesome.min.css" />
+    <Content Include="FlaskWebProject\static\vendor\Font-Awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="FlaskWebProject\static\vendor\Font-Awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="FlaskWebProject\static\vendor\Font-Awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="FlaskWebProject\static\vendor\Font-Awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="FlaskWebProject\static\vendor\Font-Awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="FlaskWebProject\static\vendor\Font-Awesome\fonts\FontAwesome.otf" />
+    <Content Include="FlaskWebProject\static\vendor\Skeleton\normalize.css" />
+    <Content Include="FlaskWebProject\static\vendor\Skeleton\skeleton.css" />
+    <Content Include="FlaskWebProject\static\scripts\copy-button.js" />
     <Content Include="requirements.txt" />
     <Content Include="FlaskWebProject\templates\index.html" />
     <Content Include="FlaskWebProject\templates\layout.html" />
