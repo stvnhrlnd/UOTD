@@ -25,6 +25,14 @@
 }
 
 .header {
-    margin-top: 8rem;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.table-centered {
+    margin: auto;
+}
+
+.text-centered {
     text-align: center;
 }
