@@ -1,3 +1,5 @@
+"""Settings for the UOTD application retrieved from environment variables."""
+
 from os import environ
 
 REPOSITORY_SETTINGS = {
