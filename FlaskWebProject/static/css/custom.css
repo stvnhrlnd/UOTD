@@ -6,15 +6,19 @@
     background: #fff;
     border-bottom: 1px solid #eee;
     height: 6.5rem;
-	text-align: center;
+    text-align: center;
 }
-	
+
+body {
+    color: #444;
+}
+
 .navbar-item {
-	display: inline-block;
+    display: inline-block;
 }
 
 .navbar-link {
-    color: #222;
+    color: #444;
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: .2rem;
@@ -36,3 +40,13 @@
 .text-centered {
     text-align: center;
 }
+
+.footer {
+    font-size: 3rem;
+    margin-top: 6rem;
+    text-align: center;
+}
+
+    .footer a {
+        color: #444;
+    }
