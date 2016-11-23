@@ -28,6 +28,11 @@ body {
     text-transform: uppercase;
 }
 
+    .navbar-link.active,
+    .navbar-link:hover {
+        color: #0FA0CE;
+    }
+
 .header {
     margin-top: 5rem;
     text-align: center;
