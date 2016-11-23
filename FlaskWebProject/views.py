@@ -33,6 +33,11 @@ def archive(partition_key):
             abort(404)
 
     uuids = repository.get_uuids(partition_key)
+
+    # 404 - UUIDs not found
+    if not uuids:
+        abort(404)
+
     display_month = date_obj.strftime("%B %Y")
 
     # Work out the next and previous months and their URLs
@@ -48,8 +53,18 @@ def archive(partition_key):
     else:
         prev_month = date(date_obj.year, date_obj.month - 1, date_obj.day)
 
-    next_url = url_for('archive', partition_key=next_month.strftime("%Y%m"))
-    prev_url = url_for('archive', partition_key=prev_month.strftime("%Y%m"))
+    # Partition keys for next and previous months
+    next_key = next_month.strftime("%Y%m")
+    prev_key = prev_month.strftime("%Y%m")
+
+    next_url = prev_url = None
+
+    # Set next and previous URLs only when there are UUIDs for those months
+    if repository.get_uuids(next_key):
+        next_url = url_for('archive', partition_key=next_key)
+
+    if repository.get_uuids(prev_key):
+        prev_url = url_for('archive', partition_key=prev_key)
 
     return render_template("archive.html",
                            uuids=uuids,

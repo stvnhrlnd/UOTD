@@ -4,13 +4,16 @@
 
 <div class="container">
     <h5 class="header">
+        {% if prev_url %}
         <a href="{{prev_url}}"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></a>
+        {% endif %}
+
         {{display_month}}
+
+        {% if next_url %}
         <a href="{{next_url}}"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
+        {% endif %}
     </h5>
-    {% if not uuids %}
-    <p class="text-centered">No UUIDs for this month &#9785;</p>
-    {% else %}
     <table class="table-centered">
         <thead>
             <tr>
@@ -27,7 +30,6 @@
             {% endfor %}
         </tbody>
     </table>
-    {% endif %}
 </div>
 
 {% endblock %}
