@@ -20,8 +20,9 @@
     <RootNamespace>FlaskWebProject</RootNamespace>
     <InterpreterId>{cc623113-0a81-4e51-a129-1d0c10d454bf}</InterpreterId>
     <InterpreterVersion>3.4</InterpreterVersion>
-    <Environment>
-    </Environment>
+    <Environment>STORAGE_NAME=
+STORAGE_KEY=
+STORAGE_TABLE_UOTD=</Environment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
