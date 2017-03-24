@@ -3,7 +3,7 @@
 from azure.common import AzureMissingResourceHttpError
 from azure.storage.table import TableService
 from datetime import date
-from uuid import uuid1
+from uuid import uuid4
 
 
 class Repository(object):
@@ -38,7 +38,7 @@ class Repository(object):
                                                   row_key)
             uuid = uotd_entity.uuid
         except AzureMissingResourceHttpError:
-            uuid = str(uuid1())
+            uuid = str(uuid4())
             uotd_entity = {
                 "PartitionKey": partition_key,
                 "RowKey": row_key,
